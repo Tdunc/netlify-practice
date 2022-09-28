@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Header, Container, List, Input, Segment } from 'semantic-ui-react';
+import TranslatorWidget from 'react-translate-widget';
 
 class App extends Component {
   state = { name: '', todos: [] }
@@ -15,6 +16,7 @@ class App extends Component {
 
     return (
       <Container>
+        <TranslatorWidget sourceLanguageCode="en" className="translator"/>
         <Segment textAlign='center'>
           <Header as='h3' textAlign='center'>Todo List</Header>
           <Form onSubmit={this.handleSubmit}>
